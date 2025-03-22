@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 200px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container__title {
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 40px;
+}
+
+.container__inputs,
+.container__labels,
+.container__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__labels--label {
+  width: 25%;
+  text-align: center;
+  font-size: 30px;
+  padding: 5px 10px;
+}
+
+.container__inputs--time {
+  border: none;
+  font-size: 50px;
+  width: 25%;
+  height: 50px;
+  text-align: center;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.container__inputs--colon {
+  font-size: 30px;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.container__btns {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 48%;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn--start {
+  background-color: green;
+}
+
+.btn--stop {
+  display: none;
+  background-color: orange;
+}
+
+.btn--reset {
+  background-color: orangered;
+}
