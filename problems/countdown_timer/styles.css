@@ -87,3 +87,8 @@ input::-webkit-outer-spin-button {
 .btn--reset {
   background-color: orangered;
 }
+
+.btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
