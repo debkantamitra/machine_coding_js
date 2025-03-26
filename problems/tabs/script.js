@@ -26,27 +26,41 @@ const listOfTabs = [
 ];
 
 (function () {
-  //   const tabsSidebar = document.querySelector(".tabs__sidebar");
-  //   const tabsContentContainer = document.querySelector(
-  //     ".tabs__content__container"
-  //   );
+  const tabsSidebar = document.querySelector(".tabs__sidebar");
+  const tabsContentContainer = document.querySelector(
+    ".tabs__content__container"
+  );
 
-  //   listOfTabs.forEach((item, index) => {
-  //     const tab = document.createElement("div");
-  //     const tabContent = document.createElement("div");
-  //     const tabTitle = document.createElement("h1");
-  //     const tabParagraph = document.createElement("p");
+  listOfTabs.forEach((item, index) => {
+    const tab = document.createElement("button");
+    const tabContent = document.createElement("div");
+    const tabTitle = document.createElement("h1");
+    const tabParagraph = document.createElement("p");
 
-  //     tab.textContent = item.name;
-  //     tabTitle.textContent = item.title;
-  //     tabParagraph.textContent = item.content;
+    // tabs creation
+    tab.textContent = item.name;
+    tab.classList.add("tabs__button");
+    tab.dataset.forTab = index;
+    tabsSidebar.appendChild(tab);
+    // -------
 
-  //     tabsSidebar.appendChild(tab);
+    // tabs content creation
+    tabContent.classList.add("tabs__content");
+    tabContent.dataset.tab = index;
+    tabTitle.textContent = item.title;
+    tabParagraph.textContent = item.content;
 
-  //     tabContent.append(tabTitle, tabParagraph);
+    tabContent.append(tabTitle, tabParagraph);
 
-  //     tabsContentContainer.appendChild(tabContent);
-  //   });
+    tabsContentContainer.appendChild(tabContent);
+    // --------
+
+    // making the first tab active by default
+    if (index === 0) {
+      tab.classList.add("tabs__button--active");
+      tabContent.classList.add("tabs__content--active");
+    }
+  });
 
   const tabs = document.querySelectorAll(".tabs__button");
   const contentTabs = document.querySelectorAll(".tabs__content");
