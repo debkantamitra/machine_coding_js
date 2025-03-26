@@ -1,0 +1,79 @@
+const listOfTabs = [
+  {
+    name: "Tab #1",
+    title: "Tab 1",
+    content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            odio officia qui mollitia, magnam reprehenderit nulla autem
+            asperiores veniam libero ipsa, voluptatum cupiditate repellat at.
+            Aliquam quaerat expedita molestias quibusdam.`,
+  },
+  {
+    name: "Tab #2",
+    title: "Tab 2",
+    content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            odio officia qui mollitia, magnam reprehenderit nulla autem
+            asperiores veniam libero ipsa, voluptatum cupiditate repellat at.
+            Aliquam quaerat expedita molestias quibusdam.`,
+  },
+  {
+    name: "Tab #3",
+    title: "Tab 3",
+    content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            odio officia qui mollitia, magnam reprehenderit nulla autem
+            asperiores veniam libero ipsa, voluptatum cupiditate repellat at.
+            Aliquam quaerat expedita molestias quibusdam.`,
+  },
+];
+
+(function () {
+  //   const tabsSidebar = document.querySelector(".tabs__sidebar");
+  //   const tabsContentContainer = document.querySelector(
+  //     ".tabs__content__container"
+  //   );
+
+  //   listOfTabs.forEach((item, index) => {
+  //     const tab = document.createElement("div");
+  //     const tabContent = document.createElement("div");
+  //     const tabTitle = document.createElement("h1");
+  //     const tabParagraph = document.createElement("p");
+
+  //     tab.textContent = item.name;
+  //     tabTitle.textContent = item.title;
+  //     tabParagraph.textContent = item.content;
+
+  //     tabsSidebar.appendChild(tab);
+
+  //     tabContent.append(tabTitle, tabParagraph);
+
+  //     tabsContentContainer.appendChild(tabContent);
+  //   });
+
+  const tabs = document.querySelectorAll(".tabs__button");
+  const contentTabs = document.querySelectorAll(".tabs__content");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const forTab = tab.dataset.forTab;
+
+      tabs.forEach((tabInner) => {
+        const forTabInner = tabInner.dataset.forTab;
+
+        if (forTab == forTabInner) {
+          tabInner.classList.add("tabs__button--active");
+        } else {
+          tabInner.classList.remove("tabs__button--active");
+        }
+      });
+
+      contentTabs.forEach((contentTab) => {
+        const tab = contentTab.dataset.tab;
+
+        if (forTab == tab) {
+          contentTab.classList.add("tabs__content--active");
+        } else {
+          contentTab.classList.remove("tabs__content--active");
+        }
+      });
+    });
+  });
+})();
