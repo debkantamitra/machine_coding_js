@@ -10,18 +10,12 @@ const listOfTabs = [
   {
     name: "Tab #2",
     title: "Tab 2",
-    content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            odio officia qui mollitia, magnam reprehenderit nulla autem
-            asperiores veniam libero ipsa, voluptatum cupiditate repellat at.
-            Aliquam quaerat expedita molestias quibusdam.`,
+    content: `While "content" is often used as a singular noun (e.g., "the content of the book"), "contents" is used when referring to the individual items or parts within a container or compilation (e.g., "the contents of a box"). `,
   },
   {
     name: "Tab #3",
     title: "Tab 3",
-    content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            odio officia qui mollitia, magnam reprehenderit nulla autem
-            asperiores veniam libero ipsa, voluptatum cupiditate repellat at.
-            Aliquam quaerat expedita molestias quibusdam.`,
+    content: `In general, "content" refers to the information, ideas, or material contained within something, like a book, website, or piece of art. It encompasses the subject matter, story, or message being conveyed. `,
   },
 ];
 
