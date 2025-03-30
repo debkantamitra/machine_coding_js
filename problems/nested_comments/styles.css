@@ -18,10 +18,11 @@ body {
 }
 
 .comment__container {
-  margin: 1rem;
+  margin: 0.1rem;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  position: relative;
+  width: 70%;
 }
 
 .comment__input {
@@ -30,6 +31,9 @@ body {
   display: none;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed gray;
 }
 
 .comment__input-active {
@@ -49,6 +53,10 @@ button {
   color: white;
 }
 
+button:hover {
+  transform: scale(105%);
+}
+
 input {
   padding: 0.5rem;
   border: 0.1rem solid gray;
@@ -62,4 +70,10 @@ input:focus {
 
 .comment__new {
   display: flex;
+}
+
+.comments:not(:first-child) {
+  position: absolute;
+  left: 10%;
+  width: 90%;
 }
